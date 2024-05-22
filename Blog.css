@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nave {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    background-color: #f2f2f2;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+}
+
+li a {
+    display: block;
+    color: rgb(22, 21, 21);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    font-weight: bold;
+    background-color: #04AA6D;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+    margin-top: 60px; /* Adjust based on navbar height */
+    text-align: center; /* Ensure the content is centered */
+}
+
+.center-image {
+    max-width: 100%;
+    height: auto;
+}
+.content img{
+    width: 100%;
+    height: 100vh;
+}
+
+.welcome-message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px; /* Add margin to ensure spacing between content and gallery */
+}
+
+.gallery {
+    margin: 10px;
+    border: 1px solid #ccc;
+    width: 180px;
+    text-align: center;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-me,
+.mailing-list {
+    width: 45%;
+}
+
+.about-me img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.about-text {
+    overflow: hidden;
+}
+
+.about-text h2 {
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+
+.mailing-list h2 {
+    margin-bottom: 10px;
+}
+
+.mailing-list form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mailing-list input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.mailing-list button {
+    padding: 10px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mailing-list button:hover {
+    background-color: #039a5c;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #777;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-icons a {
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me,
+    .mailing-list {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .about-me img {
+        margin: 0 auto 20px;
+        float: none;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .gallery {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        width: 100%;
+    }
+
+    .nave ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .li {
+        width: 100%;
+    }
+
+    .li a {
+        padding: 10px;
+    }
+
+    .content {
+        height: auto;
+    }
+}
